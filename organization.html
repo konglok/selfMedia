@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=9" />-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/title.css"/>
+    <!--<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <link rel="stylesheet" href="css/title.css"/>
+    <script>
+        $(function() {
+            function changewidth() {
+                var liwidth = $('html').width();
+                if (liwidth < 320) {
+                    liwidth = 320;
+                }
+                var fontsize = liwidth / 360 * 12;
+                if (fontsize < 12) {
+                    fontsize = 12;
+                }
+                if (fontsize > 24) {
+                    fontsize = 24;
+                }
+
+                $('html').css("font-size", fontsize + 'px');
+//					$('#searchbox').width(liwidth);
+//					$('#navmenu').width(liwidth);
+//					$('.footernav').width(liwidth);
+
+            };
+            changewidth();
+            $(window).resize(function() {
+                changewidth();
+            }); //窗口调整结束
+        })
+    </script>
+
+    <style>
+        body{font-family: 'Microsoft YaHei';}
+        img{width:50%;}
+        h3{font-size:1rem; margin:30px 0 }
+        p{color:#777;font-size:0.7rem}
+        /*.container { margin-top: 30px; }*/
+        *{  padding:0;margin:0;}
+        ul,li{ list-style: none}
+        .list{ margin-top:1rem;overflow: hidden;}
+        .list li{ width:25%; text-align: center;float:left;margin:30px 0;padding:0 2%;}
+        .list li p{text-align: left}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title ">
+        <ul>
+            <li class="pass">
+                <img class="" src="img/comment_continue.png " alt=""/>
+                <span>选择类型</span>
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png " alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>填写信息</span>
+
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png" alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>等待审核</span>
+
+            </li>
+        </ul>
+    </div>
+    <div class="guan" >
+        <img style="display:table;width:auto;margin-left: auto;margin-right:auto;margin-top:4rem;width:4rem" src="img/comment_organization_guan.png" alt=""/>
+    </div>
+    <div class="list" >
+        <ul >
+            <li>
+                <img src="img/comment_organization_media.png" alt=""/>
+                <h3>媒体</h3>
+                <p>
+                    适合报纸，杂志，电视，电台，通讯社或其他以生产内容为主的组织机构
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_organization_country.png" alt=""/>
+                <h3>国家机构</h3>
+                <p>
+                    国内外、各级、各类政府机构、事业单位、具有行政职能的社会组织等
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_organization_company.png" alt=""/>
+                <h3>企业</h3>
+                <p>
+                    适合企业，公司，分支机构，企业相关品牌，产品与服务等
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_organization_others.png" alt=""/>
+                <h3>其他组织</h3>
+                <p>
+                    适合各类公共场馆，公益机构，学校，社团，民间组织等机构团体
+                </p>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

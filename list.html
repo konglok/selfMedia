@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=9" />-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/title.css"/>
+    <!--<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <script>
+        $(function() {
+            function changewidth() {
+                var liwidth = $('html').width();
+                if (liwidth < 320) {
+                    liwidth = 320;
+                }
+                var fontsize = liwidth / 360 * 12;
+                if (fontsize < 12) {
+                    fontsize = 12;
+                }
+                if (fontsize > 24) {
+                    fontsize = 24;
+                }
+
+                $('html').css("font-size", fontsize + 'px');
+            };
+            changewidth();
+            $(window).resize(function() {
+                changewidth();
+            });
+            //窗口调整结束
+        })
+        //点击出现红色框以及提交按钮
+        $(function() {
+
+//            $('.list li').click(function () {
+//
+//                $(this).css({"border": "2px solid orangered", "box-sizing": "border-box"});
+//                $('.bottom').show();
+////             })
+//
+//            })
+            $('.list li').click(function(){
+                $(this).toggleClass('active');
+                $('.bottom').show();
+
+            })
+
+
+        })
+//
+    </script>
+
+    <style>
+        body{font-family: 'Microsoft YaHei'}
+        img{width:50%;}
+        h3{font-size:1rem;margin:10px 0 20px}
+        p{color:#777;font-size:0.7rem}
+        /*.container { margin-top: 30px;}*/
+        *{  padding:0;margin:0;}
+        ul,li{ list-style: none}
+        .list{overflow: hidden;margin-top:2rem;}
+        .list li{ width:18%;text-align: center;float:left;margin:0px 1% 30px;
+            height: 10rem;box-sizing: border-box;boder:1px solid #999;
+            /*padding:0 1%;*/
+            padding:2%;
+        }
+
+        .bottom{
+            width:5rem;
+            height:2rem;
+            line-height: 2rem;
+            background-color:orangered;
+            text-align: center;
+            margin:0 auto;
+            color:#fff;
+            border-radius: 8px;
+        }
+        .bottom a{color:#fff;font-size: 1rem;}
+        .list .active{
+            box-sizing:border-box;
+            border:2px solid orangered;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title ">
+        <ul>
+            <li class="pass">
+                <img class="" src="img/comment_continue.png " alt=""/>
+                <span>选择类型</span>
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png " alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>填写信息</span>
+
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png" alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>等待审核</span>
+
+            </li>
+        </ul>
+    </div>
+    <div class="list ">
+        <ul >
+            <li>
+                <img src="img/comment_personal_shen.png" alt="大神"/>
+                <h3>大神</h3>
+                <p>
+                    游戏、攻略 <br/>
+                    集锦
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_yu.png" alt=""/>
+                <h3>追星汪</h3>
+                <p>
+                    明星、娱乐、八卦 <br/>
+                    花絮、cp
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_zhai.png" alt=""/>
+                <h3>二次元</h3>
+                <p>
+                    宅基腐、动漫、声优 <br/>
+                    COSPLAY
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_nuan.png" alt="暖宝宝"/>
+                <h3>暖宝宝</h3>
+                <p>
+                    温馨感人、正能量<br/>
+                    心灵鸡汤
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_yi.png" alt=""/>
+                <h3>猎奇</h3>
+                <p>
+                    猎奇、恐怖、探索 <br/>
+                    灵异
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_dou.png" alt=""/>
+                <h3>节操菌</h3>
+                <p>
+                    搞笑、吐槽、模仿秀 <br/>
+                    恶搞、鬼畜
+                </p>
+            </li>
+
+            <li>
+                <img src="img/comment_personal_chong.png" alt=""/>
+                <h3>萌宠</h3>
+                <p>
+                    汪星人、喵星人 <br/>
+                    萌宠
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_ke.png" alt=""/>
+                <h3>科普君</h3>
+                <p>
+                    科普、创业、讲堂 <br/>
+                    科技测评
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_lv.png" alt=""/>
+                <h3>背包客</h3>
+                <p>
+                    旅行、美景 <br/>
+
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_xing.png" alt=""/>
+                <h3>健身</h3>
+                <p>
+                    健身、瑜伽、瘦身<br/>
+                    塑型
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_shi.png" alt="" />
+                <h3>吃货</h3>
+                <p>
+                    美食、新吃法 <br/>
+                    吃货
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_sai.png" alt=""/>
+                <h3>体育</h3>
+                <p>
+                    体育、花边、集锦 <br/>
+                    攻略、极限
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_wan.png" alt=""/>
+                <h3>城里人</h3>
+                <p>
+                    创意、新技能、混剪 <br/>
+                    大冒险
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_yue.png" alt=""/>
+                <h3>羊城通</h3>
+                <p>
+                    岭南文化、广东特色 <br/>
+                    粤语教学
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_personal_liang.png" alt=""/>
+                <h3>时尚</h3>
+                <p>
+                    美妆、时尚 <br/>
+                    穿衣搭配
+                </p>
+            </li>
+
+        </ul>
+    </div>
+    <div class="bottom" style="display: none"><a href="">提交</a></div>
+
+</div>
+
+</body>
+</html>

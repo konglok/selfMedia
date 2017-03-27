@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=9" />-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/title.css"/>
+    <!--<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <!--<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+
+    <style>
+        body {
+            font-family: 'Microsoft YaHei';
+        }
+
+        /*img{width:50%;}*/
+        .container .list li img {
+            width: 50%;
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 30px 0
+        }
+
+        p {
+            color: #777;
+            font-size: 0.7rem
+        }
+
+        /*.container { margin-top: 100px; }*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul, li {
+            list-style: none
+        }
+
+        .list {
+            margin-top: 5rem;
+            overflow: hidden;
+        }
+
+        .list li {
+            width: 50%;
+            text-align: center;
+            float: left;
+            margin: 30px 0;
+            padding: 0 8%;
+        }
+
+        .list li p {
+            text-align: left;
+            padding: 0 12%;
+            line-height: 1.2rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title ">
+        <ul>
+            <li class="pass">
+                <img class="" src="img/comment_continue.png " alt=""/>
+                <span>选择类型</span>
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png " alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>填写信息</span>
+
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png" alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>等待审核</span>
+
+            </li>
+        </ul>
+    </div>
+    <div class="list">
+        <ul >
+            <li>
+                <img src="img/comment_personal.png" alt=""/>
+
+                <h3>个人</h3>
+
+                <p>
+                    1.每次最多只能选择3项 <br/>
+                    2.确保最新的5条内包含申请类型的相关内容，以方便工作人员审核<br/>
+                    3.同一种类型最多可申请3次，且每一次审核周期会延长<br/>
+                    4.每个身份证最多只能绑定3个账号
+                    
+                </p>
+            </li>
+            <li>
+                <img src="img/comment_organization_others.png" alt=""/>
+
+                <h3>组织</h3>
+
+                <p>
+                    1.非个人官方号<br/>
+                    2.一经认证不可修改或取消<br/>
+                    3.只能选择一项进行认证<br/>
+                    4.提供真实的相关资料<br/>
+                    5.每个组织机构代码证或营业执照等组织身份证明只能绑定一个账号
+                </p>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+</div>
+<script>
+    $(function () {
+        function changewidth() {
+            var liwidth = $('html').width();
+            if (liwidth < 320) {
+                liwidth = 320;
+            }
+            var fontsize = liwidth / 360 * 12;
+            if (fontsize < 12) {
+                fontsize = 12;
+            }
+            if (fontsize > 24) {
+                fontsize = 24;
+            }
+
+            $('html').css("font-size", fontsize + 'px');
+//					$('#searchbox').width(liwidth);
+//					$('#navmenu').width(liwidth);
+//					$('.footernav').width(liwidth);
+
+        };
+        changewidth();
+        $(window).resize(function () {
+            changewidth();
+        }); //窗口调整结束
+    })
+</script>
+</body>
+</html>
