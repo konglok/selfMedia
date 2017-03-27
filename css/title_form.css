@@ -1,0 +1,37 @@
+.title{
+    margin:1rem 0;
+    margin-bottom:60px;
+}
+
+.title li {
+    float: left;
+    position: relative;
+}
+
+.title ul {
+    display: table ;
+    width : auto ;
+    margin-left : auto ;
+    margin-right : auto;
+}
+
+.title li span {
+    display: block;
+    position: absolute;
+    top:30px;
+    left: -15px;
+    width:66px;
+    color:#aaa;
+    font-size: 0.6rem;
+}
+.title .pass img{
+    width:2.2rem;
+}
+.title .ready img{
+    width:16rem;
+}
+.title .nopass img{
+    width:2rem;
+}
+ul,li{ list-style: none}
+.required{color:red;font-size:100%;vertical-align: top;}
