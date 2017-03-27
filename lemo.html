@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/title_form.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/bootstrapValidator.min.js"></script>
+    <script src="js/validator.js"></script>
+    <link href="js/bootstrapValidator.min.css" rel="stylesheet" />
+    <script>
+        //简介框字数控制提示
+        function words_deal()
+        {
+            var curLength=$("#TextArea1").val().length;
+            if(curLength>20)
+            {
+                var num=$("#TextArea1").val().substr(0,20);
+                $("#TextArea1").val(num);
+//                alert("超过字数限制，多出的字将被截断！" );
+            }
+            else
+            {
+                $("#textCount").text(20-$("#TextArea1").val().length);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+<!--lemo-->
+
+<div class="container">
+    <div class="title ">
+        <ul>
+            <li class="pass">
+                <img class="" src="img/comment_continue.png " alt=""/>
+                <span>选择类型</span>
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png " alt=""/>
+            </li>
+            <li class="pass">
+                <img class="" src="img/comment_continue.png " alt=""/>
+                <span>填写信息</span>
+
+            </li>
+            <li class="ready">
+                <img class="" src="img/a_comment_progress.png" alt=""/>
+            </li>
+            <li class="nopass">
+                <img class="" src="img/comment_nocomplete.png " alt=""/>
+                <span>等待审核</span>
+
+            </li>
+        </ul>
+    </div>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="1" class="col-sm-2 control-label"><span class="required">*</span> 认证类型</label>
+            <div class="col-sm-4">
+                <input type="" class="form-control" id="1" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label"><span class="required">*</span> 自媒体名称</label>
+            <div class="col-sm-8">
+                <input type="" class="form-control" id="name" name="name"  placeholder="字数在10个以内">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="required">*</span> 自媒体简介</label>
+            <div class="col-sm-8">
+                <div class="textarea">
+
+                    <textarea type="" class="form-control" rows="5" name="intro" id="TextArea1" onkeyup="words_deal();"></textarea>
+
+                    <!--<textarea type="" class="form-control" rows="5" name="in" onkeyup="this.value = this.value.slice(0, 5)" onfocus="if(value=='限3000字以内'){value=''}"-->
+                              <!--onblur="if (value==''){value='限3000字以内'}">限3000字以内 -->
+                    <!--</textarea>-->
+                    <h5 >您可以输入<span >20</span>个字，现在剩余<span  id="textCount" style="color:orangered">20</span>个</h5>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="required">*</span> 自媒体头像</label>
+            <div class="col-sm-8 ">
+                <img class="pull-left" src="img/drumbee_a.jpg" alt="" style="width:120px;height:120px;margin-right:20px"/>
+                <div class="controls pull-left ">
+                    <input class="input-file" id="fileInput" type="file"  >
+                    <!--<div class="uploader blue">-->
+                        <!--<input type="text" class="filename" readonly="">-->
+                        <!--<input type="button" name="file" class="button" value="Browse...">-->
+                        <!--<input type="file" size="30">-->
+                    <!--</div>-->
+
+                    <p style="margin-top:35px;color:orangered;">要求清晰、健康、代表品牌形象<br/>
+                        请勿使用二维码 <br/>
+                        建议200*200像素、大小<=5m
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">辅助材料</label>
+            <div class="col-sm-8">
+                <div class="textarea"  >
+                    <textarea type="" id="" class="form-control" rows="5"  > </textarea> <br/>
+                    <p>10-300个字,请提供您本人的专栏、播客或微信公众号等链接,我们会以您提供的文章作为参考依据,审核您申请的账号。</p>
+
+                </div>
+            </div>
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label for="3" class="col-sm-2 control-label">组织名称</label>-->
+            <!--<div class="col-sm-8">-->
+                <!--<input type="" class="form-control" id="3" placeholder="">-->
+                <!--<p style="margin-top:5px;">请与组织机构代码证名称一致,并注明原媒体名称</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="form-group">
+            <label for="location" class="col-sm-2 control-label "><span class="required">*</span> 所在地</label>
+            <div class="col-sm-2">
+                <select class="form-control" id="location">
+                    <option value="">请选择</option>
+                    <option>广东</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>天津</option>
+                    <option>浙江</option>
+                    <option>江苏</option>
+                    <option>福建</option>
+                    <option>广西</option>
+                    <option>海南</option>
+                    <option>云南</option>
+                    <option>江西</option>
+                    <option>四川</option>
+                    <option>安徽</option>
+                    <option>重庆</option>
+                    <option>湖北</option>
+                    <option>湖南</option>
+                    <option>河北</option>
+                    <option>河南</option>
+                    <option>山东</option>
+                    <option>山西</option>
+                    <option>新疆</option>
+                    <option>黑龙江</option>
+                    <option>宁夏</option>
+                    <option>辽宁</option>
+                    <option>吉林</option>
+                    <option>山西</option>
+                    <option>青海</option>
+                    <option>陕西</option>
+                    <option>甘肃</option>
+                    <option>贵州</option>
+                    <option>西藏</option>
+                    <option>内蒙古</option>
+                    <option>台湾</option>
+                    <option>香港</option>
+                    <option>澳门</option>
+                    <option>海外</option>
+                </select>
+            </div>
+            <label for="4" class="col-sm-1 control-label "><span class="required">*</span> 市</label>
+            <div class="col-sm-2">
+                <select class="form-control" id="ss">
+                    <option value="">请选择</option>
+                    <option>Your</option>
+                    <option>Options</option>
+                    <option>Here!</option>
+                </select>
+            </div>
+            <label for="4" class="col-sm-1 control-label "><span class="required">*</span> 区</label>
+            <div class="col-sm-2">
+                <select class="form-control" id="4">
+                    <option value="">请选择</option>
+                    <option>Your</option>
+                    <option>Options</option>
+                    <option>Here!</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label "><span class="required">*</span> 运营者姓名</label>
+            <div class="col-sm-2">
+                <input type="" class="form-control" id="username" name="username" placeholder="">
+            </div>
+            <label for="id" class="col-sm-2 control-label "><span class="required">*</span> 运营者身份证号</label>
+            <div class="col-sm-4">
+                <input type="" class="form-control" id="id" name="id" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"><span class="required">*</span> 运营者身份证照片</label>
+            <div class="col-sm-8 ">
+                <img class="pull-left" src="img/comment_photo.png" alt="" style="width:120px;height:120px;margin-right:20px"/>
+                <div class="controls pull-left ">
+                    <input class="input-file" id="photo" type="file" >
+                    <p style="margin-top:35px;color:orangered">照片形式请参考示例进行拍摄<br/>
+                        身份证上的信息清晰可见 <br/>
+                        身份证号码必须清晰可识别,大小不超过2M
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="profession" class="col-sm-2 control-label">专业资质</label>
+            <div class="col-sm-8">
+                <div class="controls  ">
+                    <p style="color:orangered">上传资质证明可提高审核通过率,最多可上传5张照片.健康、财经等领域必须提供相应资质证明。 </p>
+                    <input class="input-file" id="profession" type="file" >
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="call" class="col-sm-2 control-label"><span class="required">*</span> 运营者电话</label>
+            <div class="col-sm-8">
+                <input type="" class="form-control" id="call" name="phone" placeholder="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label"><span class="required">*</span> 联系邮箱</label>
+            <div class="col-sm-8">
+                <input type="" class="form-control" id="email" name="email" placeholder="">
+                <h5 style="color:orangered">认证审核结果及其他相关通知会以邮件形式通知您，敬请留意！</h5>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" style="color:red">温馨提示:</label>
+            <div class="col-sm-8">
+                <!--<label class="radio-inline col-sm-3">-->
+                    <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">-->
+                    <!--<img class="img-responsive" src="img/comment_pay.png" style="width:40px;" alt=""/>-->
+                <!--</label>-->
+                <!--<label class="radio-inline col-sm-3 ">-->
+                    <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">-->
+                    <!--<img class="img-responsive" src="img/comment_weixin.png" style="width:40px;" alt=""/>-->
+
+                <!--</label>-->
+                <p style="font-family: 'Microsoft YaHei';font-size: 16px;padding-top:7px;color:red">您所获得的打赏收益，将会入库到您的微信零钱，请务必在APP中绑定收钱用的微信号哦~</p>
+            </div>
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label for="9" class="col-sm-2 control-label"><span class="required">*</span> 账号</label>-->
+            <!--<div class="col-sm-4">-->
+                <!--<input type="" class="form-control" name="account" id="9" placeholder="">-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="form-group">
+            <div class=" text-center">
+                <label for="agree">
+                    <input  type="checkbox" name="agree" id="agree" value="option3" style="vertical-align: top">同意<a href="#">头条影音自媒体平台用户认证协议</a>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-6 text-right">
+                <button type="submit" class="btn btn-default" style="width:128px;">上一步</button>
+            </div>
+            <div class="col-xs-6 text-left">
+                <a href="check.html"><button type="submit" class="btn btn-danger" name="submit" style="width:128px;">提交</button></a>
+
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+
+</body>
+</html>
